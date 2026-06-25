@@ -21,7 +21,7 @@
   --navbar:   58px;
 }
 
-html,body{height:100%;font-family:'Inter',sans-serif;font-size:14px;background:var(--bg);color:var(--text);overflow:hidden}
+html,body{height:100%;font-family:'Inter',sans-serif;font-size:14px;background:var(--bg);color:var(--text);overflow:hidden;min-height:100vh;}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
