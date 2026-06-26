@@ -9,26 +9,27 @@
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="../styles/root.css">
+  <link rel="stylesheet" href="{% static 'css/root.css' %}">
 
   {% block extra_css %}{% endblock %}
 
 </head>
 
 <body>
+<div class="app-shell">
 
   {% include 'navigation.html' %}
 
-
-  <main>
+  <div class="main-content">
     {% include 'header.html' %}
-    {% block content %}{% endblock %}
+    <main class="page-body">
+      {% block content %}{% endblock %}
     </main>
+  </div>
 
-  
-  <script src="../js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  {% block extra_js %}{% endblock %}
+</div>
+<script src="{% static 'js/app.js' %}"></script>
+{% block extra_js %}{% endblock %}
 </body>
+
 </html>

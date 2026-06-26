@@ -1,15 +1,14 @@
-{% extends '/index.html' %}
+{% extends 'index.html' %}
 {% load static %}
 {% block title %} Dashboard page {% endblock %}
 {% block content %}
     <!-- DASHBOARD -->
-    <div class="panel active" id="panel-dashboard">
         <div class="page-hdr">
           <div>
             <div class="page-title">Welcome, <span id="dash-name"> </span> </div>
             <div class="page-sub">Here's your intelligence overview for today.</div>
           </div>
-          <button class="btn btn-primary" onclick="nav('cases')">Browse Cases</button>
+          <a href="{% url 'cases' %}" class="btn btn-primary">Browse Cases</a>
         </div>
 
         <div class="stat-grid">
@@ -60,19 +59,15 @@
           <!-- Most Wanted -->
           <div>
             <div class="card">
-              <div class="section-hdr"><div class="section-title">⚠️ Most Wanted</div></div>
+              <div class="section-hdr"><div class="section-title"> Most Wanted</div></div>
               <div class="wanted-list" id="wanted-list"></div>
             </div>
           </div>
         </div>
-    </div>
  {% endblock %}
 
-    {% block extra_css %} 
-    <link rel="stylesheet" href="{% %}">
-    {% endblock %}
-
-    {% block extra_js %}
+  <!-- JavaScript -->
+ {% block extra_js %}
     <script>
 
     </script>
